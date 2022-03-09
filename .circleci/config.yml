@@ -102,11 +102,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: "."
-      - run: 
+      - run:
           name: Populate Vercel Credentials
           command: |
-          mkdir .vercel
-          echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_PROJECT_ID"}' > .vercel/project.json
+            mkdir .vercel
+            echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_PROJECT_ID"}' > .vercel/project.json
       - run:
           name: Deploy to Vercel production
           command: |
