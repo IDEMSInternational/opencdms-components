@@ -108,7 +108,6 @@ jobs:
       - run:
           command: |
             sudo npm i -g vercel
-            vercel inspect --token $VERCEL_TOKEN
             vercel deploy --token $VERCEL_TOKEN
 
 ######################################################################################################
