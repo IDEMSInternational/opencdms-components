@@ -104,11 +104,11 @@ jobs:
           at: "."
       - run: |
           mkdir .vercel
-          echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_ORG_ID"}' > .vercel/project.json
+          echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_PROJECT_ID"}' > .vercel/project.json
       - run:
           command: |
             sudo npm i -g vercel
-            vercel deploy --token $VERCEL_TOKEN
+            vercel --prod --token $VERCEL_TOKEN
 
 ######################################################################################################
 #  Workflows - Collections of jobs to define overall processes
