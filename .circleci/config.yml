@@ -104,7 +104,7 @@ jobs:
           at: "."
       - run: |
           mkdir .vercel
-          echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_ORG_ID"}'' > .vercel/project.json
+          echo '{"orgId":"$VERCEL_ORG_ID","projectId":"$VERCEL_ORG_ID"}' > .vercel/project.json
       - run:
           command: |
             npm i -g vercel
@@ -130,4 +130,4 @@ workflows:
           requires:
             - Test
             - Build
-          <<: *filter_only_main
+          # <<: *filter_only_main
